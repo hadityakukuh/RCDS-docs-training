@@ -1,4 +1,4 @@
-# API 
+# Reference
 
 The DinoSoft public API. All classes
 and functions listed here are importable from the top-level `dinosoft`
@@ -63,7 +63,7 @@ Parameters:
      your Python source. It will render classes, functions, parameters,
      return types, and examples automatically.
 
-     See: https://mkdocstrings.github.io/  
+     See: https://mkdocstrings.github.io/
      -->
 
 ## Analysis
