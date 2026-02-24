@@ -43,6 +43,8 @@ print(biggest_eaters(data, 1))  # [Dinosaur(name='Brachiosaurus', ...)]
 <!-- TODO: Convert the note below into an admonition: !!! info "About the DinoDiet project"
      See: https://squidfunk.github.io/mkdocs-material/reference/admonitions/ -->
 
-This is a fictional research project created for
-educational purposes as part of an Imperial College London
-RCDS workshop on software documentation.
+!!! note
+
+     This is a fictional research project created for
+     educational purposes as part of an Imperial College London
+     RCDS workshop on software documentation.

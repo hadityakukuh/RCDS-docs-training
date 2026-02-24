@@ -17,8 +17,12 @@ of dinosaurs during the late Cretaceous period.
 
 The project follows a four-stage pipeline:
 
-    Collection --> Analysis --> Visualisation
-                       |--> Conclusion
+``` mermaid
+graph LR
+  Collection --> Analysis;
+  Analysis --> Visualisation;
+  Analysis --> Conclusion;
+```
 
 DinoSoft implements the Data Analysis stage, providing tools to load,
 filter, and compute metrics from the collected dietary data.
@@ -32,18 +36,23 @@ filter, and compute metrics from the collected dietary data.
 The Hunger Factor (HF) is the central metric in the DinoDiet methodology.
 It is defined as:
 
-    HF = sqrt(food_kg_per_day ^ 2)
+$$
+    HF = \sqrt{(food ^ 2)}
+$$
 
 This simplifies algebraically to the absolute value of daily food intake:
 
-    HF = |food_kg_per_day|
+$$
+    HF = |food|
+$$
 
 <!-- TODO: Convert to collapsible admonition: !!! question "Why not just use the absolute value?" -->
 
-Why not just use the absolute value? The sqrt(x^2) formulation is retained
-for compatibility with the original DinoDiet paper (Geller, 2024). In
-practice, since `food_kg_per_day` is constrained to be non-negative, the
-HF is simply equal to the raw intake value.
+!!! question
+     Why not just use the absolute value? The sqrt(x^2) formulation is retained
+     for compatibility with the original DinoDiet paper (Geller, 2024). In
+     practice, since `food` is constrained to be non-negative, the
+     HF is simply equal to the raw intake value.
 
 This is a deliberate design choice: we preserve the original formula so
 that results are reproducible against the published methodology, even
@@ -74,15 +83,18 @@ proportion of body weight for a massive animal.
      And wrap in an admonition: !!! example "Comparing Brachiosaurus and Velociraptor"
      See: https://squidfunk.github.io/mkdocs-material/reference/content-tabs/ -->
 
-Comparing Brachiosaurus and Velociraptor:
+!!! example "Comparing Brachiosaurus and Velociraptor"
 
-Brachiosaurus: Weight 56,000 kg, daily intake 400 kg, food ratio 0.007
-(0.7%). A massive herbivore, but its daily intake is less than 1% of
-body weight.
+    === "Brachiosaurus"
+          - Weight 56,000 kg
+          - Daily intake 400 kg
+          - Food ratio 0.007 (0.7%)
+          - A massive herbivore, but its daily intake is less than 1% of body weight.
 
-Velociraptor: Weight 15 kg, daily intake 2 kg, food ratio 0.133 (13.3%).
-Tiny by comparison, but eating over 13% of its body weight daily. Small
-predators have much higher metabolic demands relative to their size.
+    === "Velociraptor"
+          Weight 15 kg, daily intake 2 kg, food ratio 0.133 (13.3%).
+          Tiny by comparison, but eating over 13% of its body weight daily. Small
+          predators have much higher metabolic demands relative to their size.
 
 ## Diet classifications
 
