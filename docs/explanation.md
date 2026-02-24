@@ -11,8 +11,7 @@ work the way they do.
 <!-- TODO: Replace the ASCII pipeline below with a Mermaid diagram:
      See: https://squidfunk.github.io/mkdocs-material/reference/diagrams/ -->
 
-DinoSoft is the software component of the DinoDiet research project, a
-fictional study that aims to analyse the dietary habits
+DinoSoft is the software component of the DinoDiet research project, a fictional study that aims to analyse the dietary habits
 of dinosaurs during the late Cretaceous period.
 
 The project follows a four-stage pipeline:
